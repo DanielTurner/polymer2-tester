@@ -4,6 +4,7 @@ MAINTAINER Daniel Turner <001.daniel.turner@gmail.com>
 USER root
 RUN apt-get update
 RUN apt-get install -y build-essential
+RUN apt-get install -y apt-utils
 RUN apt-get install -y curl
 RUN apt-get install -y openssh-client
 RUN apt-get install -y git
