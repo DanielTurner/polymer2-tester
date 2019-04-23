@@ -11,9 +11,6 @@ RUN apt-get install -y git
 # Install ssh-agent
 RUN apt-get install -y openssh-client
 
-# Install Firefox
-RUN apt-get install -y firefox
-
 # Install xvfb
 RUN apt-get install -y xvfb
 
@@ -24,12 +21,6 @@ RUN apt-get install -y nodejs
 RUN npm i -g npm
 
 RUN echo "unsafe-perm=true" > ~/.npmrc
-
-# Install yarn
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-RUN apt-get update
-RUN apt-get install -y yarn
 
 # Add json - merges json files
 RUN npm i -g json-merge-patch-cli
@@ -54,8 +45,6 @@ RUN npm i -g webdriverio \
 RUN google-chrome --version
 
 RUN polymer --version
-
-RUN yarn --version
 
 RUN node --version
 
