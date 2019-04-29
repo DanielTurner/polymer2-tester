@@ -15,7 +15,7 @@ RUN apt-get install -y openssh-client
 RUN apt-get install -y xvfb
 
 # Install Node
-RUN apt-get install -y curl 
+RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 RUN npm i -g npm
@@ -27,6 +27,9 @@ RUN npm i -g json-merge-patch-cli
 
 # Install bower
 RUN npm i -g bower
+
+# Install yarn
+RUN npm i -g yarn
 
 # Install Polymer CLI
 RUN npm i -g polymer-cli
